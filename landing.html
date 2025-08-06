@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>
+            Order Page
+        </title>
+    </head>
+   
+   
+              <script>
+                
+                
+           
+
+function printLog(){
+   var nameNode = document.getElementById('name');
+   var addressNode=document.getElementById('address');
+   var dessertnameNode=document.getElementById('dessertname');
+   var quantityNode=document.getElementById('quantity');
+   var mobilenumberNode=document.getElementById('mobilenumber');
+  
+   var name=nameNode.value;
+   var address=addressNode.value;
+   var dessertname=dessertnameNode.value;
+   var quantity=quantityNode.value;
+   var mobilenumber=mobilenumberNode.value;
+   
+   
+
+   console.log(`name ${name}`)
+   console.log(`address ${address}`)
+    console.log(`dessertname ${dessertname}`)
+      console.log(`quantity ${quantity}`)
+
+      console.log(`mobilenumber ${mobilenumber}`)
+      
+       if(name && address && dessertname && quantity && mobilenumber)
+       {
+        alert('Order Successful!\nThanks for your Patience')
+        
+         }else{
+            
+         }
+
+}
+   </script>
+   <style>
+        .col-flex{
+            display:flex;
+            flex-direction: row;
+            background-color:rgba(172, 127, 180, 0.427) ;
+            width: 1000px;
+            height: 600px;
+            border-radius: 30px;
+            align-content: center;
+            flex-wrap: wrap;
+            margin: 30px auto;
+
+        }</style>
+    </head>
+    <body onload="printLog()" style="background-color:rgba(170, 125, 198, 0.427);">
+        <div class="col-flex">
+            <img src="https://jodhpursweethomeandbakers.com/wp-content/uploads/2023/08/Pastry-jodhpur-sweet-home-and-bakerrs.jpg" width="450px" height="500px" style=" margin:auto; justify-content: center; border-radius: 20px;"/>
+            
+       <center>
+        <img width="90"
+        height="90"
+        
+        src="https://www.justbake.in/assets/img/logo/logo.png"/>
+
+         <h2 style="color: rgb(14, 14, 149);">
+            ENTER DETAILS TO CONTINUE
+            </h2>
+    
+        <form>
+            <label onload="printLog()" style="margin: 45px;" for="Username">NAME :</label>
+            <input type="text"
+            placeholder="Enter your name:"  id="name"/>
+        </form>
+        
+        <form>
+            <label style="margin: 34px;" for="address">ADDRESS :</label>
+            <input type="text"
+            placeholder="Enter your address:"  id="address"/>
+
+        </form>
+       
+    <form>
+        <label style="margin: 11px;" for="dessertname">DESSERT NAME :</label>
+        <input type="text"
+        placeholder="Enter the dessertname:"  id="dessertname"/>
+         
+    </form>
+     
+
+    <form>
+        <label style="margin: 26px;" for="quantity">QUANTITY :</label>
+        <input type="number"
+        
+        placeholder="Enter the quantity in kilograms:"id="quantity"/>
+    </form>
+        
+        <form >
+            <label for="mobilenumber">MOBILE NUMBER :</label>
+            <input type="tel" pattern="\d{10}"  maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+            placeholder="Enter your mobile number:" id="mobilenumber"/>
+
+        </form>
+        <button style="background-color: rgb(220, 54, 76);">CANCEL ORDER</button>
+        <button onclick="printLog()"  style="background-color: rgb(106, 188, 121);">PLACE ORDER</button>
+        
+   </center> 
+        </div>
+
+    </body>
+</html>
